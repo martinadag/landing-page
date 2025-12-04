@@ -4,7 +4,7 @@ import './App.css'
 import Navbar from './components/navbar'
 import HeroGrid from './components/herogrid';
 import Footer from './components/footer';
-
+import News from './components/news';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +12,10 @@ function App() {
   return (
     <>
       <Navbar />
-      <HeroGrid />
+      <div className="main-content">
+        <HeroGrid />
+        <News />
+      </div>
       <Footer />
     </>
   )

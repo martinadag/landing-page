@@ -4,24 +4,27 @@
     align-items: center;
     gap: 20px;
     padding: 80px 20px;
-    background-color: #1a1a1a;
+    background: linear-gradient(-45deg, #1a1a1a, #2b2b2b, #3c3c3c, #4d4d4d, #5e5e5e, #6f6f6f, #7f7f7f);
+    background-size: 400% 400%;
+    animation: gradientBG 14s ease infinite;
 }
 
 /* righe della griglia */
 .hero-grid-row {
     display: flex;
-    justify-content: center;
     gap: 30px;
+    justify-content: flex-start; /* allinea a sinistra per scroll orizzontale */
+    overflow-x: auto; /* abilita scroll se troppi elementi */
+    padding-bottom: 10px; /* spazio per scrollbar */
 }
 
-/* riga superiore con un'immagine */
-.hero-grid-row.top {
-    justify-content: center;
+/* rimuove lo scroll visibile su Firefox, lascia la standard */
+.hero-grid-row::-webkit-scrollbar {
+    height: 8px;
 }
-
-/* riga inferiore con due immagini */
-.hero-grid-row.bottom {
-  justify-content: center;
+.hero-grid-row::-webkit-scrollbar-thumb { /* stile della scrollbar per altri browser */
+    background-color: #444;
+    border-radius: 4px;
 }
 
 /* immagini nella griglia */
@@ -30,53 +33,75 @@
     overflow: hidden;
     border-radius: 15px;
     cursor: pointer;
+    flex: 0 0 auto; /* mantiene la dimensione fissa e non si riduce */
     transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 550px;
+    height: 350px;
 }
 
-.hero-grid-item img {
-  width: 550px;
-  height: 350px;
-  object-fit: cover;
-  display: block;
-  border-radius: 15px;
-  transition: transform 0.3s ease;
+.hero-grid-item img { /* dimensioni fisse per uniformità */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
 }
 
 /* zoom al passaggio del mouse */
 .hero-grid-item:hover img {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
-/* overlay testo*/
+/* overlay testo */
 .hero-grid-text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 8px 13px;
-  background-color: rgba(26, 26, 26, 0.5); /* trasparenza 50% */
-  max-width: 60%; /* occupa solo parte dell’immagine */
-  border-bottom-right-radius: 10px; /* arrotondato */
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px 13px; 
+    padding-right: 15%;
+    background-color: rgba(26, 26, 26, 0.8);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* testo in basso */
+    box-sizing: border-box;
 }
 
-/* titolo */
 .hero-grid-text h2 {
-  font-family: 'Bangers', cursive;
-  color: red;
-  font-size: 24px;
-  margin: 0 0 4px 0;
-  text-align: left;
+    font-family: 'Bangers', cursive;
+    color: rgb(221, 15, 15);
+    text-shadow: 2px 2px 0 black;
+    font-size: 24px;
+    margin: 0 0 4px 0;
+    text-align: left;
 }
 
-/* paragrafo */
 .hero-grid-text p {
-  font-family: "Roboto Condensed", sans-serif;
-  color: white;
-  font-size: 14px;
-  text-align: left;
-  margin: 0;
-  line-height: 1.2;
+    font-family: "Roboto Condensed", sans-serif;
+    color: white;
+    font-size: 14px;
+    text-align: left;
+    margin: 0;
+    line-height: 1.2;
+    text-shadow: 2px 2px 0 black;
+}
+
+/* responsive su schermi piccoli */
+@media (max-width: 900px) {
+    .hero-grid-row {
+        flex-direction: column;
+        gap: 20px;
+        overflow-x: visible; /* scroll non serve su mobile */
+    }
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }

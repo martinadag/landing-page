@@ -1,0 +1,135 @@
+.news-section {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.news-cards {
+  display: flex;
+  flex-wrap: wrap;     /* le card vanno automaticamente a capo */
+  gap: 20px;
+  justify-content: center;
+  overflow-x: visible; /* niente scroll orizzontale */
+}
+
+/* card base */
+.news-card {
+  background-color: #2b2b2b;
+  width: 300px;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex-shrink: 0;
+}
+
+.news-card:hover {  /* effetto hover */
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+/* colori */
+.news-card.playstation {
+  border-right-color: #003791;
+  border-bottom-color: #003791;
+}
+
+.news-card.xbox {
+  border-right-color: #107C10;
+  border-bottom-color: #107C10;
+}
+
+.news-card.nintendo {
+  border-right-color: #E60012;
+  border-bottom-color: #E60012;
+}
+
+.news-card.pc {
+  border-right-color: #7a00ff;
+  border-bottom-color: #7a00ff;
+}
+
+/* bullet colorati */
+.news-card.playstation .bullet {
+  background-color: #003791;
+}
+
+.news-card.xbox .bullet {
+  background-color: #107C10;
+}
+
+.news-card.nintendo .bullet {
+  background-color: #E60012;
+}
+
+.news-card.pc .bullet {
+  background-color: #7a00ff;
+}
+
+/* titolo */
+.card-header h3 {
+  color: white;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+/* lista notizie */
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;   /* piccolo spazio tra bullet e link */
+}
+
+.bullet {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;     /* impedisce al bullet di ridursi */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.news-item:hover .bullet {
+  transform: rotate(-20deg);
+}
+
+.bullet img {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;   /* anche l'immagine non si riduce */
+}
+
+.news-link {
+  flex: 1;     /* occupa tutto lo spazio rimanente */
+  word-break: break-word;  /* evita overflow e forza a capo se testo troppo lungo */
+}
+
+.news-link:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .news-card {
+    width: 45%; /* 2 per riga */
+  }
+}
+
+@media (max-width: 600px) {
+  .news-card {
+    width: 100%; /* 1 per riga */
+  }
+}
