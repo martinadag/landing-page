@@ -1,0 +1,81 @@
+.hero-grid {
+    display: flex
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 100px 20px;
+    background-color: #1a1a1a;
+}
+
+/* righe della griglia */
+.hero-grid-row {
+    display: flex;
+    justify-content: center
+    gap: 30px;
+}
+
+/* riga superiore con un'immagine */
+.hero-grid-row.top {
+    justify-content: center;
+}
+
+/* riga inferiore con due immagini */
+.hero-grid-row.bottom {
+  justify-content: center;
+}
+
+/* immagini nella griglia */
+.hero-grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hero-grid-item img {
+  width: 400px;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+/* zoom al passaggio del mouse */
+.hero-grid-item:hover img {
+  transform: scale(1.05);
+}
+
+/* overlay testo*/
+.hero-grid-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px 15px;
+  background-color: rgba(26, 26, 26, 0.5); /* trasparenza 50% */
+  max-width: 60%; /* occupa solo parte dell’immagine */
+  border-bottom-right-radius: 10px; /* arrotondato */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* titolo */
+.hero-grid-text h2 {
+  font-family: 'Bangers', cursive;
+  color: red;
+  font-size: 24px;
+  margin: 0 0 10px 0;
+  text-align: left;
+}
+
+/* paragrafo */
+.hero-grid-text p {
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+  font-size: 14px;
+  text-align: left;
+  margin: 0;
+}
