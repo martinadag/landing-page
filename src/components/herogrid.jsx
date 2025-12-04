@@ -8,7 +8,7 @@ function HeroGrid() {
                     <img src="https://www.popspace.it/wp-content/uploads/2021/01/copertina-articolo-20.jpg" alt="Undertale" />
                      <div className="hero-grid-text">
                         <h2>Undertale</h2>
-                         <p>Undertale è un gioco di ruolo nel quale il giocatore veste i panni di un bambino con cui deve esplorare un mondo sotterraneo in cerca di una via d'uscita, percorrendo le mappe tutte diverse tra loro</p>
+                         <p>Undertale è un gioco di ruolo nel quale il giocatore veste i panni di un bambino con cui deve esplorare un mondo sotterraneo in cerca di una via d'uscita, percorrendo le mappe tutte diverse tra loro.</p>
                      </div>
                  </div>
              </div>
