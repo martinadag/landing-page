@@ -1,6 +1,6 @@
 import "../styles/grid.css";
 
-const games = [     // array di giochi
+const games = [     // array: lista di valori
   { id: 1, title: "Undertale", desc: "Undertale è un gioco di ruolo nel quale il giocatore veste i panni di un bambino con cui deve esplorare un mondo sotterraneo in cerca di una via d'uscita, percorrendo le mappe tutte diverse tra loro.", img: "https://www.popspace.it/wp-content/uploads/2021/01/copertina-articolo-20.jpg"},
   { id: 2, title: "Silksong", desc: "Silksong è il sequel di Hollow Knight, che segue le avventure di Hornet in un nuovo regno misterioso.", img: "https://assets.nintendo.com/image/upload/q_auto/f_auto/store/software/switch/70010000020840/60eebc8f7133f685eddbffbe43c8da617ba0a5d699f2008f9c31c6119d1792af"},
   { id: 3, title: "Celeste", desc: "Celeste è un platformer acclamato per la sua storia emotiva e il gameplay impegnativo, incentrato sulla scalata di una montagna.", img: "https://gaming-cdn.com/images/products/8003/orig/celeste-pc-mac-gioco-steam-cover.jpg?v=1705489821"},
@@ -15,13 +15,13 @@ function Grid() {
 
   // array diviso in righe
   const rows = [];
-  for (let i = 0; i < games.length; i += itemsPerRow) {
-    rows.push(games.slice(i, i + itemsPerRow));
+  for (let i = 0; i < games.length; i += itemsPerRow) {   // ciclo che incrementa di 4
+    rows.push(games.slice(i, i + itemsPerRow));   // slice: estrae una sezione dell'array
   }
 
   return (
     <section className="grid">
-      {rows.map((row, index) => (
+      {rows.map((row, index) => (   // mappa ogni riga
         <div className={`grid-row ${index % 2 === 0 ? "top" : "bottom"}`} key={index}>
           {row.map((game) => (
             <div className="grid-item" key={game.id}>

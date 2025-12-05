@@ -10,7 +10,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <>  {/* fragment per contenere più componenti */}
       <Navbar />
       <div className="main-content">
         <Grid />

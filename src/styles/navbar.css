@@ -5,12 +5,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 25px;
+  padding: 0 25px;  /* spazio vuoto */
   box-sizing: border-box;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 1000;  /* assicura che la navbar sia sopra altri elementi */
 }
 
 .navbar-left {

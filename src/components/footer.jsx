@@ -1,6 +1,6 @@
 import "../styles/footer.css";
 
-function Footer() {
+function Footer() {   // per averlo sempre uguale
   return (
     <footer className="footer">
       <p>© 2025 Giochi Indie. Tutti i diritti riservati.</p>
