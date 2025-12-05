@@ -1,4 +1,4 @@
-Necessario node.js*
+Necessario node.js* e Bootsrap**
 
 1. Scaricare il progetto
 2. Estrarre il file zip dove si preferisce
@@ -7,4 +7,5 @@ Necessario node.js*
 5. npm run dev
 6. CTRL + click sx sul link per visualizzare la pagina
 
-*per sapere se è già installato, scrivi node -v nel cmd
+*per sapere se è già installato scrivi node -v nel cmd, o scaricalo dal web
+**nel cmd digita npm install bootstrap
