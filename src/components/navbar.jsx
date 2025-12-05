@@ -11,7 +11,7 @@ function Navbar() {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, []);   // per sintassi
 
   // chiudi menu a tendina se si passa a desktop
   useEffect(() => {
@@ -38,9 +38,9 @@ function Navbar() {
           <a href="https://www.nintendo.com/" target="_blank">NINTENDO</a>
         </div>
 
-        <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}> 
           ☰
-        </button>
+        </button>   {/* cambia lo stato del const */}
 
         {menuOpen && (  // mostra menu a tendina se aperto
           <div className="dropdown-menu">

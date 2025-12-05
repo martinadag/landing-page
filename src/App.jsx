@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 import Navbar from './components/navbar'
-import HeroGrid from './components/herogrid';
+import Grid from './components/grid';
 import Footer from './components/footer';
 import News from './components/news';
 
@@ -13,7 +13,7 @@ function App() {
     <>
       <Navbar />
       <div className="main-content">
-        <HeroGrid />
+        <Grid />
         <News />
       </div>
       <Footer />

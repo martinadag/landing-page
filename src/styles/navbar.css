@@ -107,32 +107,3 @@
     gap: 0;
   }
 }
-
-/* pulsante modalità scura/chiara */
-.dark-mode-btn {
-  font-size: 18px;
-  background: none;
-  border: 1px solid red;
-  color: red;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 10px;
-  transition: all 0.3s;
-}
-
-.dark-mode-btn:hover {
-  background-color: red;
-  color: white;
-}
-
-/* modalità dark/light per il body */
-body.dark-mode {
-  background-color: #1a1a1a;
-  color: white;
-}
-
-body.light-mode {
-  background-color: #f0f0f0;
-  color: #111;
-}
