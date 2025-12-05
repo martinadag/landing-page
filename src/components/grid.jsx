@@ -19,11 +19,11 @@ function Grid() {
     rows.push(games.slice(i, i + itemsPerRow));   // slice: estrae una sezione dell'array
   }
 
-  return (
+  return (    // struttura a griglia con righe alternate
     <section className="grid">
-      {rows.map((row, index) => (   // mappa ogni riga
+      {rows.map((row, index) => (   // crea ogni riga
         <div className={`grid-row ${index % 2 === 0 ? "top" : "bottom"}`} key={index}>
-          {row.map((game) => (
+          {row.map((game) => (  // crea ogni elemento nella riga
             <div className="grid-item" key={game.id}>
               <a href={game.link}>
                 <img src={game.img} alt={game.title} />

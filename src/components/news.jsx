@@ -3,7 +3,7 @@ import "../styles/news.css";
 const newsData = [  // dati delle notizie per ogni piattaforma
   {
     platform: "PlayStation™",
-    colorClass: "playstation",
+    colorClass: "playstation",  // classe di colore specifica
     logo: "https://img.icons8.com/ios11/512/FFFFFF/play-station.png",
     items: [
       { text: "Elden Ring: Nightreign – DLC “The Forsaken Hollows”", link: "https://multiplayer.it/notizie/dlc-the-forsaken-hollows-elden-ring-nightreign-difficile-game-director-risponde.html" },
